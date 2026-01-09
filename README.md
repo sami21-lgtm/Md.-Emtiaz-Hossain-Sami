@@ -30,11 +30,11 @@ portfolio-website/
 Check out my live portfolio here: https://YOUR_USERNAME.github.io/my-portfolio/ (Note: Replace YOUR_USERNAME with your real GitHub username after hosting)
 
 📬 Contact & Socials
-LinkedIn: [Your LinkedIn Profile Link]
+LinkedIn:https://www.linkedin.com/in/emtiaz-hossain-6b4416340/
 
-Facebook: [Your Facebook Profile Link]
+Facebook:https://www.facebook.com/emtiaz.hossain.2478
 
-Instagram: [Your Instagram Profile Link]
+Instagram: https://www.instagram.com/sami_e.m.t.i.a.z_008/
 
 Email: sami242-35-266@diu.edu.bd
 

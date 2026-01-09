@@ -53,3 +53,98 @@ section { min-height: 100vh; padding: 10rem 9% 2rem; }
 .footer-menu { list-style: none; display: flex; justify-content: center; gap: 3rem; margin-bottom: 2rem; }
 .footer-menu a { color: #fff; font-size: 1.6rem; }
 .footer-social a { font-size: 2.2rem; color: #fff; margin: 0 1.5rem; }
+/* About Section Grid Layout */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    margin-top: 2rem;
+    align-items: start;
+}
+
+/* Left Profile Info Cards */
+.about-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.info-item {
+    background: var(--second-bg-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid #333;
+    transition: 0.3s ease;
+}
+
+.info-item:hover {
+    border-color: var(--main-color);
+    transform: translateY(-5px);
+}
+
+.info-item i {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.info-item p {
+    font-size: 1.2rem;
+    color: #888;
+    margin: 0;
+}
+
+.info-item span {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Right Education Content */
+.education-content .title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.edu-card {
+    background: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    border-left: 4px solid var(--main-color);
+    margin-bottom: 1.5rem;
+    transition: 0.3s;
+}
+
+.edu-card:hover {
+    background: #1a1a1a;
+}
+
+.edu-card h4 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+}
+
+.edu-card p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.edu-card span {
+    font-size: 1.3rem;
+    color: #888;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+    .about-info-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}

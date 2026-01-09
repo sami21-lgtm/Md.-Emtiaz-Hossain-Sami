@@ -20,7 +20,7 @@
     --text-color: #fff;
 }
 
-/* ১০০% জুমে স্বাভাবিক রাখার জন্য ফিক্সড ফন্ট সাইজ */
+/* ১০০% জুমে স্বাভাবিক রাখার জন্য ফিক্সড ফন্ট সাইজ (Standard scaling) */
 html {
     font-size: 16px; 
     overflow-x: hidden;
@@ -63,7 +63,7 @@ body {
 /* Section Common Styling */
 section {
     min-height: 100vh;
-    padding: 80px 9% 20px;
+    padding: 100px 9% 20px;
 }
 
 .heading {
@@ -130,10 +130,10 @@ section {
 
 .home-img .image img { width: 100%; height: 100%; object-fit: cover; }
 
-/* About Section - Centered */
+/* About Section - Centered Layout Fix */
 .about-container {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 30px;
@@ -159,7 +159,7 @@ section {
     transition: 0.3s;
 }
 
-.info-item:hover { border-color: var(--main-color); }
+.info-item:hover { border-color: var(--main-color); transform: translateY(-3px); }
 .info-item i { font-size: 20px; color: var(--main-color); }
 .info-item p { font-size: 11px; color: #888; margin: 0; }
 .info-item span { font-size: 13px; font-weight: 500; }
@@ -176,10 +176,12 @@ section {
     padding: 20px;
     border-radius: 12px;
     border-left: 4px solid var(--main-color);
-    margin-bottom: 10px;
+    transition: 0.3s;
 }
 
 .edu-card h4, .lang-info h4 { font-size: 17px; color: var(--main-color); }
+.edu-card p { font-size: 14px; margin: 5px 0; }
+.edu-card span { font-size: 12px; color: #888; }
 
 /* Skills Section */
 .skills-row { display: flex; flex-wrap: wrap; gap: 30px; }
@@ -194,7 +196,7 @@ section {
 .achieve-box:hover { border-color: var(--main-color); transform: translateY(-5px); }
 .achieve-box i { font-size: 40px; color: var(--main-color); margin-bottom: 15px; }
 
-/* Contact Section - New Professional Design */
+/* Contact Section - Professional Styling */
 .contact-container {
     display: flex;
     justify-content: center;
@@ -223,11 +225,7 @@ section {
     transition: 0.4s;
 }
 
-.contact-item:hover {
-    border-color: var(--main-color);
-    transform: translateX(10px);
-}
-
+.contact-item:hover { border-color: var(--main-color); transform: translateX(10px); }
 .contact-item i { font-size: 24px; color: var(--main-color); }
 .contact-item .details p { font-size: 12px; color: #888; }
 .contact-item .details span { font-size: 14px; font-weight: 600; }
@@ -256,11 +254,7 @@ section {
 }
 
 .input-box input:focus, 
-.input-box textarea:focus {
-    border-color: var(--main-color);
-    outline: none;
-}
-
+.input-box textarea:focus { border-color: var(--main-color); outline: none; }
 .contact-form textarea { resize: none; margin-bottom: 20px; }
 
 /* Footer */
@@ -271,11 +265,14 @@ section {
 .footer-social a { font-size: 20px; color: #fff; margin: 0 10px; transition: 0.3s; }
 .footer-social a:hover { color: var(--main-color); transform: translateY(-3px); }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
+/* Responsive Media Queries */
+@media (max-width: 991px) {
     .header { padding: 15px 5%; }
-    section { padding: 80px 5% 20px; }
+    section { padding: 100px 5% 20px; }
+}
+
+@media (max-width: 768px) {
     .home { flex-direction: column-reverse; text-align: center; }
     .input-group { flex-direction: column; }
-    .contact-container { flex-direction: column; }
+    .about-container, .contact-container { flex-direction: column; align-items: center; }
 }

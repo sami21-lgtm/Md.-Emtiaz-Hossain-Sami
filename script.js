@@ -1,29 +1,28 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Sticky Navbar
-    window.addEventListener("scroll", () => {
-        document.querySelector(".navbar").classList.toggle("sticky", window.scrollY > 20);
-    });
-
-    // Mobile Menu
-    const menuBtn = document.querySelector(".menu-btn");
-    const menu = document.querySelector(".menu");
-    menuBtn.onclick = () => {
-        menu.classList.toggle("active");
-        menuBtn.querySelector("i").classList.toggle("active");
-    };
-
-    // Typing Animations
-    new Typed(".typing", {
-        strings: ["Software Engineer", "Ploughing Assistant", "Coordinator", "Developer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
-    new Typed(".typing-2", {
-        strings: ["Ploughing Assistant", "Agri-Coordinator", "Software Enthusiast"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
+/* Typing Animation */
+const typed = new Typed('.multiple-text', {
+    strings: ['Software Engineer', 'Ploughing Assistant', 'DIU Student', 'Coordinator'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
 });
+
+/* Scroll Section Active Link */
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+        };
+    });
+};

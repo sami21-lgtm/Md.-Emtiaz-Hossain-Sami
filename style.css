@@ -1,7 +1,5 @@
-/* Google Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-/* Basic Resets */
 * {
     margin: 0;
     padding: 0;
@@ -20,408 +18,99 @@
     --text-color: #fff;
 }
 
+/* 100% zoom-e normal rakhar jonno font-size 55-60% er moddhe thaka valo */
+html {
+    font-size: 50%; 
+    overflow-x: hidden;
+}
+
 body {
     background: var(--bg-color);
     color: var(--text-color);
 }
 
-/* Header & Navbar */
+section {
+    min-height: 100vh;
+    padding: 8rem 9% 2rem; /* padding ektu komano hoyeche */
+}
+
+/* Header Adjustments */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 2rem 9%;
-    background: rgba(0, 0, 0, 0.8);
+    padding: 1.5rem 9%;
+    background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    border-bottom: 1px solid rgba(0, 238, 255, 0.1);
 }
 
-.logo {
-    font-size: 3rem;
-    color: var(--text-color);
-    font-weight: 800;
-}
+.logo { font-size: 2.5rem; color: var(--text-color); font-weight: 800; }
+.navbar a { font-size: 1.6rem; color: var(--text-color); margin-left: 3rem; transition: 0.3s; }
+.navbar a:hover { color: var(--main-color); }
 
-.logo span {
-    color: var(--main-color);
-}
+/* Home Section Scaling */
+.home { display: flex; align-items: center; justify-content: space-between; gap: 4rem; }
+.home-content h1 { font-size: 4.5rem; font-weight: 700; line-height: 1.2; }
+.home-content p { font-size: 1.5rem; margin: 1.5rem 0; color: #ccc; }
+.home-img .image { width: 28rem; height: 28rem; border-radius: 50%; border: 4px solid var(--main-color); }
 
-.navbar a {
-    font-size: 1.8rem;
-    color: var(--text-color);
-    margin-left: 4rem;
-    transition: 0.3s;
-    font-weight: 500;
-}
-
-.navbar a:hover {
-    color: var(--main-color);
-}
-
-/* Section Common Styling */
-section {
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
-}
-
-.heading {
-    font-size: 4.5rem;
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.heading span {
-    color: var(--main-color);
-}
-
-/* Home Section */
-.home {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5rem;
-}
-
-.home-content h3 {
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-.home-content h1 {
-    font-size: 5.5rem;
-    font-weight: 700;
-}
-
-.home-content h1 span {
-    color: var(--main-color);
-    text-shadow: 0 0 15px var(--main-color);
-}
-
-.home-content p {
-    font-size: 1.6rem;
-    margin: 2rem 0;
-    color: #ccc;
-    line-height: 1.6;
-}
-
-.social-media a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4.5rem;
-    height: 4.5rem;
-    background: transparent;
-    border: 2px solid var(--main-color);
-    border-radius: 50%;
-    font-size: 2rem;
-    color: var(--main-color);
-    margin: 0 1.5rem 3rem 0;
-    transition: 0.5s ease;
-}
-
-.social-media a:hover {
-    background: var(--main-color);
-    color: var(--bg-color);
-    box-shadow: 0 0 20px var(--main-color);
-}
-
-.btn {
-    display: inline-block;
-    padding: 1.2rem 3rem;
-    background: var(--main-color);
-    border-radius: 5px;
-    font-size: 1.6rem;
-    color: var(--bg-color);
-    font-weight: 700;
-    box-shadow: 0 0 10px var(--main-color);
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-.btn:hover {
-    box-shadow: none;
-    transform: scale(1.05);
-}
-
-/* Home Image Profile */
-.home-img .image {
-    width: 32rem;
-    height: 32rem;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid var(--main-color);
-    box-shadow: 0 0 20px var(--main-color);
-}
-
-.home-img .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Updated About Me Grid Section */
-/* About Section - Compact & Normal Size */
+/* About Section - Normal Scaling */
 .about-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 2rem; 
+    gap: 3rem;
     margin-top: 2rem;
 }
 
-/* Left Profile Grid - Smaller Sizing */
 .about-info-grid {
-    flex: 1 1 35rem;
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 .info-item {
     background: var(--second-bg-color);
-    padding: 1.2rem; 
+    padding: 1.2rem;
     border-radius: 0.8rem;
     display: flex;
     align-items: center;
     gap: 1rem;
-    border: 1px solid #333;
-    transition: 0.3s;
+    border: 1px solid #222;
 }
 
-.info-item i {
-    font-size: 1.6rem; 
-    color: var(--main-color);
-}
+.info-item i { font-size: 1.8rem; color: var(--main-color); }
+.info-item p { font-size: 1rem; color: #888; margin: 0; }
+.info-item span { font-size: 1.2rem; font-weight: 600; }
 
-.info-item p {
-    font-size: 1rem; 
-    color: #888;
-    margin: 0;
-}
-
-.info-item span {
-    font-size: 1.1rem; 
-    font-weight: 600;
-}
-
-/* Right Education Side - Compact */
-.education-content {
-    flex: 1 1 45rem;
-}
-
-.education-content .title {
-    font-size: 2rem; 
-    margin-bottom: 1.5rem;
-}
+.education-content { flex: 1.2; }
+.education-content .title { font-size: 2.2rem; margin-bottom: 1.5rem; }
 
 .edu-card {
-    background: var(--second-bg-color);
-    padding: 1.5rem; 
-    border-radius: 1rem;
-    border-left: 3px solid var(--main-color);
-    margin-bottom: 1rem;
-}
-
-.edu-card h4 {
-    font-size: 1.4rem; /* কলেজের নাম ছোট করা হয়েছে */
-    color: var(--main-color);
-}
-
-.edu-card p {
-    font-size: 1.2rem;
-    margin: 0.3rem 0;
-}
-
-.edu-card span {
-    font-size: 1rem;
-    color: #888;
-}
-
-
-html {
-    font-size: 62.5%; 
-}
-
-@media (max-width: 768px) {
-    .about-info-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Left Side: Personal Info Grid */
-.about-info-grid {
-    flex: 1 1 40rem; 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 2rem;
-}
-
-.info-item {
-    background: var(--second-bg-color);
-    padding: 2rem;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start;
-    gap: 1rem;
-    border: 1px solid #333;
-    transition: 0.3s ease;
-}
-
-.info-item:hover {
-    border-color: var(--main-color);
-    box-shadow: 0 0 1rem var(--main-color);
-}
-
-.info-item i {
-    font-size: 2.5rem;
-    color: var(--main-color);
-}
-
-.info-item p {
-    font-size: 1.3rem;
-    color: #888;
-    margin: 0;
-}
-
-.info-item span {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-color);
-}
-
-/* Right Side: Education Content */
-.education-content {
-    flex: 1 1 50rem;
-}
-
-.education-content .title {
-    font-size: 2.8rem;
-    margin-bottom: 2.5rem;
-    color: var(--text-color);
-}
-
-.edu-card {
-    background: var(--second-bg-color);
-    padding: 2.5rem;
-    border-radius: 1.5rem;
-    border-left: 5px solid var(--main-color);
-    margin-bottom: 2rem;
-    transition: 0.4s;
-}
-
-.edu-card:hover {
-    transform: translateX(10px); /* ডানে সামান্য সরবে হোভার করলে */
-    background: #1a1a1a;
-}
-
-.about-info-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-}
-
-.info-item {
     background: var(--second-bg-color);
     padding: 1.5rem;
     border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    border: 1px solid #333;
-    transition: 0.3s;
+    border-left: 3px solid var(--main-color);
+    margin-bottom: 1.2rem;
 }
+.edu-card h4 { font-size: 1.5rem; color: var(--main-color); }
+.edu-card p { font-size: 1.2rem; margin: 0.3rem 0; }
 
-.info-item:hover {
-    border-color: var(--main-color);
-    transform: translateY(-5px);
-}
+/* Skills & Achievements Sizing */
+.heading { font-size: 3.5rem; text-align: center; margin-bottom: 3rem; }
+.skills-box .progress h3 { font-size: 1.4rem; }
+.bar { height: 0.8rem; }
 
-.info-item i {
-    font-size: 2.2rem;
-    color: var(--main-color);
-}
+.achieve-box { padding: 3rem 1.5rem; border-radius: 1.5rem; }
+.achieve-box i { font-size: 4rem; }
+.achieve-box h3 { font-size: 1.8rem; }
 
-.info-item p {
-    font-size: 1.1rem;
-    color: #888;
-    margin: 0;
-}
-
-.info-item span {
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.education-content .title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.edu-card {
-    background: var(--second-bg-color);
-    padding: 2rem;
-    border-radius: 1rem;
-    border-left: 4px solid var(--main-color);
-    margin-bottom: 1.5rem;
-}
-
-.edu-card h4 {
-    font-size: 1.8rem;
-    color: var(--main-color);
-}
-
-.edu-card p {
-    font-size: 1.4rem;
-    margin: 0.5rem 0;
-}
-
-.edu-card span {
-    font-size: 1.2rem;
-    color: #888;
-}
-
-/* Skills Bars */
-.skills { background: var(--second-bg-color); }
-.skills-row { display: flex; flex-wrap: wrap; gap: 5rem; }
-.skills-column { flex: 1 1 40rem; }
-.skills-box .progress { margin-bottom: 2rem; }
-.skills-box .progress h3 { font-size: 1.7rem; display: flex; justify-content: space-between; }
-.bar { height: 1.2rem; border-radius: .6rem; background: rgba(255, 255, 255, .1); margin-top: .5rem; }
-.bar span { display: block; height: 100%; border-radius: .6rem; background: var(--main-color); box-shadow: 0 0 10px var(--main-color); }
-
-/* Achievement Boxes */
-.achieve-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 2.5rem; }
-.achieve-box { flex: 1 1 30rem; background: var(--second-bg-color); padding: 4rem 2rem; border-radius: 2rem; text-align: center; border: .2rem solid transparent; transition: .5s; }
-.achieve-box:hover { border-color: var(--main-color); transform: scale(1.02); }
-.achieve-box i { font-size: 5rem; color: var(--main-color); margin-bottom: 2rem; }
-
-/* Contact Section */
-.contact-wrapper { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; }
-.info-card { background: var(--second-bg-color); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; display: flex; align-items: center; gap: 2rem; border-left: 5px solid var(--main-color); }
-.contact-form input, .contact-form textarea { width: 100%; padding: 1.5rem; background: var(--second-bg-color); color: #fff; margin-bottom: 1.5rem; border-radius: 8px; border: 1px solid #333; font-size: 1.6rem; }
-
-/* Footer Styling */
-.footer { background: var(--bg-color); padding: 5rem 9%; text-align: center; border-top: .1rem solid rgba(255, 255, 255, .1); }
-.footer-content h2 { font-size: 3rem; letter-spacing: 2px; }
-.footer-menu { list-style: none; display: flex; justify-content: center; gap: 3rem; margin: 2rem 0; }
-.footer-menu a { color: #fff; font-size: 1.6rem; }
-.footer-social a { font-size: 2.2rem; color: #fff; margin: 0 1.5rem; transition: 0.3s; }
-.footer-social a:hover { color: var(--main-color); }
-
-/* Responsive Media Queries */
+/* Responsive Adjustments */
 @media (max-width: 991px) {
-    .header { padding: 2rem 3%; }
-    section { padding: 10rem 3% 2rem; }
-    .home { flex-direction: column-reverse; }
-    .about-container { grid-template-columns: 1fr; }
-    .about-info-grid { grid-template-columns: 1fr; }
+    html { font-size: 50%; }
+    .about-container { flex-direction: column; }
 }

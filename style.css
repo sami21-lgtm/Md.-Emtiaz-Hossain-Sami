@@ -1,53 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 * { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; border: none; outline: none; scroll-behavior: smooth; font-family: 'Poppins', sans-serif; }
 :root { --bg-color: #080808; --second-bg-color: #131313; --main-color: #00eeff; --text-color: #fff; }
 
 body { background: var(--bg-color); color: var(--text-color); }
 
-.header { position: fixed; top: 0; width: 100%; padding: 2rem 9%; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center; z-index: 100; border-bottom: 1px solid rgba(0, 238, 255, 0.2); }
+.header { position: fixed; top: 0; width: 100%; padding: 2rem 9%; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center; z-index: 100; border-bottom: 1px solid rgba(0, 238, 255, 0.1); }
 .logo { font-size: 3rem; color: var(--text-color); font-weight: 800; }
 .logo span { color: var(--main-color); }
 .navbar a { font-size: 1.8rem; color: var(--text-color); margin-left: 4rem; transition: 0.3s; font-weight: 500; }
-.navbar a:hover { color: var(--main-color); text-shadow: 0 0 10px var(--main-color); }
+.navbar a:hover { color: var(--main-color); }
 
 section { min-height: 100vh; padding: 10rem 9% 2rem; }
 
-/* Home Section */
 .home { display: flex; align-items: center; gap: 5rem; }
-.home-content h3 { font-size: 2rem; font-weight: 700; letter-spacing: 2px; }
 .home-content h1 { font-size: 5.5rem; font-weight: 700; margin-top: 1rem; }
-.home-content h1 span { color: var(--main-color); text-shadow: 0 0 20px var(--main-color); }
-.home-content p { font-size: 1.6rem; margin: 2rem 0; line-height: 1.6; color: #ccc; }
+.home-content h1 span { color: var(--main-color); text-shadow: 0 0 15px var(--main-color); }
+.home-content p { font-size: 1.6rem; margin: 2rem 0; color: #ccc; }
 
-.social-media a { display: inline-flex; justify-content: center; align-items: center; width: 4.5rem; height: 4.5rem; background: transparent; border: 2px solid var(--main-color); border-radius: 50%; font-size: 2rem; color: var(--main-color); margin: 0 1.5rem 3rem 0; transition: 0.5s ease; }
-.social-media a:hover { background: var(--main-color); color: var(--bg-color); box-shadow: 0 0 20px var(--main-color); }
+.btn { display: inline-block; padding: 1.2rem 3rem; background: var(--main-color); border-radius: 5px; font-size: 1.6rem; color: var(--bg-color); font-weight: 700; transition: 0.5s; box-shadow: 0 0 10px var(--main-color); }
+.btn:hover { box-shadow: none; transform: scale(1.02); }
 
-.btn { display: inline-block; padding: 1.2rem 3rem; background: var(--main-color); border-radius: 5px; font-size: 1.6rem; color: var(--bg-color); font-weight: 700; transition: 0.5s; box-shadow: 0 0 15px var(--main-color); }
-.btn:hover { box-shadow: none; transform: scale(1.05); }
+.home-img .image { width: 32rem; height: 32rem; border-radius: 50%; overflow: hidden; border: 4px solid var(--main-color); box-shadow: 0 0 20px var(--main-color); }
+.home-img .image img { width: 100%; height: 100%; object-fit: cover; }
 
-/* Glowing Circle Image */
-.home-img { position: relative; width: 35rem; height: 35rem; }
-.glowing-circle { width: 100%; height: 100%; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
-.glowing-circle .image { width: 90%; height: 90%; border-radius: 50%; overflow: hidden; border: 5px solid var(--main-color); box-shadow: 0 0 30px var(--main-color); }
-.glowing-circle .image img { width: 100%; height: 100%; object-fit: cover; }
-
-/* Contact Section - New Step-by-Step Design */
-.heading { font-size: 5rem; text-align: center; margin-bottom: 5rem; }
+/* About Section Styles */
+.about { background: var(--second-bg-color); text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.heading { font-size: 4.5rem; margin-bottom: 4rem; }
 .heading span { color: var(--main-color); }
+.about-content h3 { font-size: 2.6rem; margin-bottom: 1.5rem; }
+.about-content p { font-size: 1.7rem; color: #ccc; line-height: 1.8; max-width: 850px; }
 
-.contact-wrapper { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start; }
-
-.contact-info .info-card { background: var(--second-bg-color); padding: 2.5rem; border-radius: 15px; margin-bottom: 2rem; display: flex; align-items: center; gap: 2rem; border-left: 5px solid var(--main-color); transition: 0.4s; }
-.contact-info .info-card:hover { transform: translateX(10px); background: #1a1a1a; box-shadow: 0 0 20px rgba(0, 238, 255, 0.2); }
-.contact-info .icon { font-size: 3rem; color: var(--main-color); }
-.contact-info h4 { font-size: 1.8rem; margin-bottom: 5px; }
-.contact-info p { font-size: 1.4rem; color: #bbb; }
-
-.contact-form { background: var(--second-bg-color); padding: 4rem; border-radius: 20px; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
-.contact-form .input-group { display: flex; gap: 2rem; margin-bottom: 2rem; }
-.contact-form input, .contact-form textarea { width: 100%; padding: 1.5rem; background: var(--bg-color); color: #fff; border-radius: 8px; margin-bottom: 2rem; border: 1px solid #333; font-size: 1.5rem; }
-.contact-form input:focus { border-color: var(--main-color); }
-
-@media (max-width: 900px) {
-    .contact-wrapper { grid-template-columns: 1fr; }
-    .home { flex-direction: column-reverse; text-align: center; }
-}
+/* Contact Styles */
+.contact-wrapper { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; margin-top: 3rem; }
+.info-card { background: var(--second-bg-color); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; display: flex; align-items: center; gap: 1.5rem; border-left: 4px solid var(--main-color); }
+.contact-form { background: var(--second-bg-color); padding: 3rem; border-radius: 15px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 1.5rem; background: var(--bg-color); color: #fff; margin-bottom: 1.5rem; border-radius: 8px; font-size: 1.5rem; }
+  

@@ -1,28 +1,7 @@
-/* Typing Animation */
+// Typing Animation
 const typed = new Typed('.multiple-text', {
-    strings: ['Software Engineer', 'Ploughing Assistant', 'DIU Student', 'Coordinator'],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
+    strings: ['Software Engineer', 'Agri-Coordinator', 'Ploughing Assistant'],
+    typeSpeed: 80,
+    backSpeed: 50,
     loop: true
 });
-
-/* Scroll Section Active Link */
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
-
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
-
-        if(top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
-        };
-    });
-};

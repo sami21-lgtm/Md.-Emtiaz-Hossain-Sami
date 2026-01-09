@@ -18,27 +18,26 @@
     --second-bg-color: #131313;
     --main-color: #00eeff;
     --text-color: #fff;
+    --box-bg: rgba(255, 255, 255, 0.05); /* Realistic Glass effect */
 }
 
-/* ১০০% জুমে ছবির মতো স্বাভাবিক রাখার জন্য স্ট্যান্ডার্ড সাইজ */
 html {
-    font-size: 16px; 
+    font-size: 16px;
     overflow-x: hidden;
 }
 
 body {
     background: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.6;
 }
 
-/* Header & Navbar */
+/* Header */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 15px 9%;
-    background: rgba(8, 8, 8, 0.9);
+    padding: 1.5rem 9%;
+    background: rgba(8, 8, 8, 0.8);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -51,169 +50,194 @@ body {
 .logo span { color: var(--main-color); }
 
 .navbar a {
-    font-size: 15px;
+    font-size: 16px;
     color: var(--text-color);
-    margin-left: 25px;
+    margin-left: 30px;
     transition: 0.3s;
 }
 
 .navbar a:hover { color: var(--main-color); }
 
-/* Section Common Styling */
+/* Common Section Styling */
 section {
     min-height: 100vh;
-    padding: 100px 9% 20px;
+    padding: 10rem 9% 2rem;
 }
 
 .heading {
-    font-size: 32px;
+    font-size: 3.5rem;
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 4rem;
 }
 
 .heading span { color: var(--main-color); }
 
-/* Home Section */
-.home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-}
-
-.home-content h1 { font-size: 45px; font-weight: 700; line-height: 1.1; }
-.home-content h1 span { color: var(--main-color); text-shadow: 0 0 10px var(--main-color); }
-.home-content h3 { font-size: 20px; margin-top: 10px; }
-.home-content p { font-size: 14px; margin: 20px 0; color: #ccc; max-width: 450px; }
-
-.home-img .image {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    border: 4px solid var(--main-color);
-    box-shadow: 0 0 15px var(--main-color);
-    overflow: hidden;
-}
-
-.home-img .image img { width: 100%; height: 100%; object-fit: cover; }
-
-/* ABOUT SECTION - EXACTLY LIKE SCREENSHOT */
+/* --- ABOUT SECTION (4-COLUMN GRID) --- */
 .about-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 3rem;
 }
 
-/* Top 4-Column Grid for Personal Info */
 .about-info-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(4, 1fr); /* এক লাইনে ৪টি বক্স */
+    gap: 1.5rem;
 }
 
 .info-item {
-    background: #fdfdfd; /* Light bg like pic */
-    padding: 15px;
-    border-radius: 12px;
+    background: var(--second-bg-color);
+    padding: 20px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
-    gap: 12px;
-    border: 1px solid #ddd;
+    gap: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.4s ease;
 }
 
-.info-item i { font-size: 1.4rem; color: var(--main-color); }
-.info-text p { font-size: 10px; color: #777; margin: 0; text-transform: uppercase; }
-.info-text span { font-size: 12px; font-weight: 600; color: #333; }
+.info-item:hover {
+    border-color: var(--main-color);
+    transform: translateY(-5px);
+    background: rgba(0, 238, 255, 0.05);
+}
 
-/* Bottom Content: Education (Wide) & Languages (Small) */
+.info-item i { font-size: 2rem; color: var(--main-color); }
+.info-text p { font-size: 11px; color: #888; text-transform: uppercase; margin: 0; }
+.info-text span { font-size: 14px; font-weight: 600; color: #fff; }
+
 .about-content-lower {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 30px;
-}
-
-.education-side .title, .languages-side .title {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: var(--text-color);
+    gap: 3rem;
 }
 
 .edu-card, .lang-card {
     background: var(--second-bg-color);
-    padding: 20px;
-    border-radius: 12px;
-    border-left: 4px solid var(--main-color);
-    margin-bottom: 15px;
-    border-top: 1px solid #222;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border-left: 5px solid var(--main-color);
+    margin-bottom: 1.5rem;
 }
 
-.edu-card h4, .lang-card h4 { font-size: 16px; color: var(--main-color); }
-.edu-card p { font-size: 13px; margin: 5px 0; }
-.edu-card span, .lang-card span { font-size: 11px; color: #888; }
-
-/* CONTACT SECTION - NEW DESIGN */
+/* --- CONTACT SECTION (REALISTIC DESIGN) --- */
 .contact-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    align-items: stretch;
+    gap: 3rem;
     flex-wrap: wrap;
     max-width: 1100px;
     margin: 0 auto;
 }
 
 .contact-info {
-    flex: 1 1 300px;
+    flex: 1 1 350px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1.5rem;
 }
 
 .contact-card {
-    background: var(--second-bg-color);
-    padding: 20px;
-    border-radius: 12px;
+    background: linear-gradient(145deg, #161616, #0d0d0d);
+    padding: 25px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    transition: 0.4s;
+}
+
+.contact-card:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.1);
+}
+
+.contact-card i {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    background: rgba(0, 238, 255, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.details p { font-size: 13px; color: #888; }
+.details span { font-size: 15px; font-weight: 500; }
+
+/* Realistic Contact Form */
+.contact-form {
+    flex: 1 1 500px;
+    background: var(--second-bg-color);
+    padding: 3rem;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.input-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-box { width: 100%; }
+
+.input-box input, 
+.input-box textarea {
+    width: 100%;
+    padding: 1.2rem;
+    background: #080808;
+    border-radius: 12px;
+    color: var(--text-color);
+    font-size: 15px;
     border: 1px solid #222;
     transition: 0.3s;
 }
 
-.contact-card:hover { border-color: var(--main-color); transform: translateX(5px); }
-.contact-card i { font-size: 20px; color: var(--main-color); }
-.contact-card span { font-size: 13px; font-weight: 500; }
-
-.contact-form {
-    flex: 1 1 500px;
-    background: var(--second-bg-color);
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid #222;
+.input-box input:focus, 
+.input-box textarea:focus {
+    border-color: var(--main-color);
+    background: #0c0c0c;
+    box-shadow: 0 0 10px rgba(0, 238, 255, 0.1);
 }
 
-.input-group { display: flex; gap: 15px; margin-bottom: 15px; }
-.input-box input, .input-box textarea {
-    width: 100%;
-    padding: 12px;
-    background: var(--bg-color);
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--main-color);
     border-radius: 8px;
-    color: #fff;
-    font-size: 14px;
-    border: 1px solid #333;
+    color: var(--bg-color);
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--main-color);
 }
 
-.input-box input:focus, .input-box textarea:focus { border-color: var(--main-color); }
-.contact-form textarea { resize: none; height: 120px; margin-bottom: 15px; }
-
-/* Footer */
-.footer {
-    padding: 30px 9%;
-    text-align: center;
-    background: var(--bg-color);
-    border-top: 1px solid #222;
+.btn:hover {
+    box-shadow: none;
+    transform: translateY(2px);
 }
+
+/* Home Image Glowing Circle */
+.home-img .image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img .image img { width: 100%; height: 100%; object-fit: cover; }
 
 /* Responsive */
 @media (max-width: 991px) {
@@ -221,8 +245,7 @@ section {
     .about-content-lower { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 768px) {
-    .home { flex-direction: column-reverse; text-align: center; }
+@media (max-width: 600px) {
     .about-info-grid { grid-template-columns: 1fr; }
     .input-group { flex-direction: column; }
 }

@@ -164,11 +164,81 @@ section {
 }
 
 /* Updated About Me Grid Section */
+/* About Section Container - Fixed Layout */
 .about-container {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; 
     gap: 4rem;
-    align-items: start;
+    margin-top: 3rem;
+}
+
+/* Left Side: Personal Info Grid */
+.about-info-grid {
+    flex: 1 1 40rem; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+}
+
+.info-item {
+    background: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 1rem;
+    border: 1px solid #333;
+    transition: 0.3s ease;
+}
+
+.info-item:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.info-item i {
+    font-size: 2.5rem;
+    color: var(--main-color);
+}
+
+.info-item p {
+    font-size: 1.3rem;
+    color: #888;
+    margin: 0;
+}
+
+.info-item span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Right Side: Education Content */
+.education-content {
+    flex: 1 1 50rem;
+}
+
+.education-content .title {
+    font-size: 2.8rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-color);
+}
+
+.edu-card {
+    background: var(--second-bg-color);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border-left: 5px solid var(--main-color);
+    margin-bottom: 2rem;
+    transition: 0.4s;
+}
+
+.edu-card:hover {
+    transform: translateX(10px); /* ডানে সামান্য সরবে হোভার করলে */
+    background: #1a1a1a;
 }
 
 .about-info-grid {
